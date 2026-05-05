@@ -52,34 +52,48 @@
 
 body {
   margin: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, var(--accent-bg), transparent 70%),
+    var(--bg);
+  min-height: 100svh;
 }
 
 #root {
-  width: 1126px;
+  width: 640px;
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
+  padding: 16px 24px 64px;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 }
 
+#root > h1 {
+  order: 1;
+}
+#root > .new-item-form {
+  order: 2;
+}
+#root > .list {
+  order: 3;
+}
+
 h1,
 h2 {
   font-family: var(--heading);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-h);
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+  font-size: 44px;
+  letter-spacing: -1.32px;
+  margin: 24px 0 28px;
+  text-align: center;
+  @media (max-width: 600px) {
+    font-size: 32px;
+    margin: 16px 0 20px;
   }
 }
 h2 {
